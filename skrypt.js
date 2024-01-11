@@ -31,7 +31,7 @@ const kopiujKolor = (element, wartoscHex) => {
     navigator.clipboard.writeText(wartoscHex).then(() => {
         kolorElement.innerText = "Skopiowane!";
         setTimeout(() => kolorElement.innerText = wartoscHex, 1000);
-    });
+    }).catch(() => alert("Nie udało się skopiować kodu koloru!"));
 }
 
 generujPalete()
